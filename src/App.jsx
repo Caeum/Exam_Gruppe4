@@ -6,18 +6,24 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import CategoryPage from './pages/CategoryPage';
 
+// Hovedkomponenten for applikasjonen
 const App = () => {
   return (
+    // Router sørger for at applikasjonen kan bruke ruter med React Router
     <Router>
+      {/* Navbar vises alltid øverst på alle sider */}
       <Navbar />
+
+      {/* Definerer ulike ruter (URL-stier) og hvilke komponenter som skal vises for hver */}
       <Routes>
+        {/* Kategori-sider for musikk, sport og teater/show – sender kategori som prop */}
         <Route path="/music" element={<CategoryPage category="music" />} />
         <Route path="/sport" element={<CategoryPage category="sport" />} />
         <Route path="/teatershow" element={<CategoryPage category="teatershow" />} />
+
+        {/* Midlertidig rute for "Logg inn"-siden – kan erstattes med Dashboard senere */}
         <Route path="/logginn" element={<div>Logg inn</div>} />
       </Routes>
     </Router>
   );
 };
-
-export default App;
