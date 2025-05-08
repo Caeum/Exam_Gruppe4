@@ -5,7 +5,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import CategoryPage from './pages/CategoryPage';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/LoggInn';
 
 // Hovedkomponenten for applikasjonen
 const App = () => {
