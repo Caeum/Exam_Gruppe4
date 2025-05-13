@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
+import EventCard from './components/EventCard';
 import CategoryPage from './pages/CategoryPage';
 import Dashboard from './pages/LoggInn';
 
@@ -24,6 +25,7 @@ const App = () => {
 
         {/* Midlertidig rute for "Logg inn"-siden – kan erstattes med Dashboard senere */}
         <Route path="/logginn" element={<Dashboard category="logginn" />} />
+        <Route path="/" element={<EventCard />} />
       </Routes>
     </Router>
   );
