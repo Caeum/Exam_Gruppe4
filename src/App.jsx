@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import EventCard from './components/EventCard';
 import CategoryPage from './components/CategoryPage';
 import Dashboard from './pages/LoggInn';
+import ArtistCard from './components/ArtistCard';
 
 // Hovedkomponenten for applikasjonen
 const App = () => {
@@ -19,9 +20,9 @@ const App = () => {
       {/* Definerer ulike ruter (URL-stier) og hvilke komponenter som skal vises for hver */}
       <Routes>
         {/* Kategori-sider for musikk, sport og teater/show – sender kategori som prop */}
-        <Route path="/music" element={<CategoryPage category="music" />} />
+        <Route path="/music" element={<ArtistCard category="music" />} />
         <Route path="/sport" element={<CategoryPage category="sport" />} />
-        <Route path="/teatershow" element={<CategoryPage category="teatershow" />} />
+        <Route path="/teatershow" element={<ArtistCard category="teatershow" />} />
 
         {/* Midlertidig rute for "Logg inn"-siden – kan erstattes med Dashboard senere */}
         <Route path="/logginn" element={<Dashboard category="logginn" />} />

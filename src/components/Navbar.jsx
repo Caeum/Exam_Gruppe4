@@ -1,5 +1,5 @@
+import React from "react";
 import { Link } from "react-router-dom"; //Importerer Link fra react-router-dom for Nav.
-
 
 // Nav-komponenten viser navigasjonsmenyen som skal vises på alle sider
 const Nav = () => {
