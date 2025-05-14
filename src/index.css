@@ -81,10 +81,12 @@ button{
   font-size:11px;
   padding:10px;
   border: 1px solid #ffffff;
+  margin-top:50px;
   margin:10px;
 }
 
 p{
+  font-size:10px;
   color: #fff;
 }
 

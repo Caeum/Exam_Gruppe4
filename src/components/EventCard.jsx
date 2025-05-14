@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import CategoryPage from "../pages/CategoryPage";
 
 const DiscoveriApi = () => {
     const [events, setEvents] = useState([]);
@@ -46,7 +47,7 @@ const DiscoveriApi = () => {
     return (
         <div>
             <div>
-                <h2>Sommerens festivaler!</h2>      
+                <h2>Sommerens festivaler!</h2>    
                 {events.length > 0 ? (
                     <ul>
                         {events.map((event) => (
@@ -59,10 +60,10 @@ const DiscoveriApi = () => {
                     <p>Fant ingen eventer.</p>
                 )}
             </div>
-                <button><a href="/music"><p>Les mer om NEON | Lørdagspass - Music</p></a></button>
-                <button><a href="/music"><p>Les mer om Tons of Rock at the Fortress - Music</p></a></button>
-                <button><a href="/music"><p>Les mer om Skeikampenfestivalen - Dagspass - FREDAG - Music</p></a></button>
-                <button><a href="/music"><p>Les mer om Findings Festival 2025 - Festivalpass - Music</p></a></button>
+                <a href="music"><button><p>Les mer om NEON | Lørdagspass - Music</p></button></a>
+                <a href="music"><button><p>Les mer om Tons of Rock at the Fortress - Music</p></button></a>
+                <a href="music"><button><p>Les mer om Skeikampenfestivalen - Dagspass - FREDAG - Music</p></button></a>
+                <a href="music"><button><p>Les mer om Findings Festival 2025 - Festivalpass - Music</p></button></a>
         </div>
     );
 };

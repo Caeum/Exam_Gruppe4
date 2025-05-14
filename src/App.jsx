@@ -5,7 +5,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import EventCard from './components/EventCard';
-import CategoryPage from './pages/CategoryPage';
+import CategoryPage from './components/CategoryPage';
 import Dashboard from './pages/LoggInn';
 
 // Hovedkomponenten for applikasjonen
@@ -25,6 +25,7 @@ const App = () => {
 
         {/* Midlertidig rute for "Logg inn"-siden – kan erstattes med Dashboard senere */}
         <Route path="/logginn" element={<Dashboard category="logginn" />} />
+        <Route path="/music" element={<Dashboard category="music" />} />
         <Route path="/" element={<EventCard />} />
       </Routes>
     </Router>
