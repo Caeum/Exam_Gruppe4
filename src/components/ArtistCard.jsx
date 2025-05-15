@@ -13,19 +13,15 @@ const ArtistCard = () => {
   return (
     <nav>
       {kategorier.map((kategori) => (
-        <Link
+        <button><Link
           key={kategori.slug}
-          to={`${kategori.slug}`}
-          id={`${kategori.slug}-color`}
+          to={`#/${kategori.slug}`}
+          id={`#/${kategori.slug}-color`}
         >
           {kategori.navn}
-        </Link>
+        </Link></button>
       ))}
-                <a href="oslo"><button><p>Oslo</p></button></a>
-                <a href="stockholm"><button><p>Stockholm</p></button></a>
-                <a href="berlin"><button><p>Berlin</p></button></a>
-                <a href="london"><button><p>London</p></button></a>
-    </nav>
+        </nav>
   );
 }
 

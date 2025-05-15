@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import CategoryPage from "../pages/CategoryPage";
+import ArtistCard from "./ArtistCard";
 
 const DiscoveriApi = () => {
     const [events, setEvents] = useState([]);
@@ -64,6 +65,7 @@ const DiscoveriApi = () => {
                 <a href="music"><button><p>Les mer om Tons of Rock at the Fortress - Music</p></button></a>
                 <a href="music"><button><p>Les mer om Skeikampenfestivalen - Dagspass - FREDAG - Music</p></button></a>
                 <a href="music"><button><p>Les mer om Findings Festival 2025 - Festivalpass - Music</p></button></a>
+                <ArtistCard />
         </div>
     );
 };

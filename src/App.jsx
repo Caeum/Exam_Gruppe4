@@ -20,14 +20,19 @@ const App = () => {
       {/* Definerer ulike ruter (URL-stier) og hvilke komponenter som skal vises for hver */}
       <Routes>
         {/* Kategori-sider for musikk, sport og teater/show – sender kategori som prop */}
-        <Route path="/music" element={<ArtistCard category="music" />} />
+        <Route path="/music" element={<CategoryPage category="music" />} />
         <Route path="/sport" element={<CategoryPage category="sport" />} />
-        <Route path="/teatershow" element={<ArtistCard category="teatershow" />} />
+        <Route path="/teatershow" element={<CategoryPage category="teatershow" />} />
+        <Route path="/" element={<EventCard category="billettlyst" />} />
+        <Route path="#/oslo" id="oslo-color" slug={<EventCard category="billettlyst" />} />
+        <Route path="#/paris" id="paris-color" slug={<EventCard category="billettlyst" />} />
+        <Route path="#/stockholm" id="stockhom-color" slug={<EventCard category="billettlyst" />} />
+        <Route path="#/berlin" id="berlin-color" slug={<EventCard category="billettlyst" />} />
+        <Route path="#/london" id="london-color" slug={<EventCard category="billettlyst" />} />
+
 
         {/* Midlertidig rute for "Logg inn"-siden – kan erstattes med Dashboard senere */}
         <Route path="/logginn" element={<Dashboard category="logginn" />} />
-        <Route path="/music" element={<Dashboard category="music" />} />
-        <Route path="/" element={<EventCard />} />
       </Routes>
     </Router>
   );

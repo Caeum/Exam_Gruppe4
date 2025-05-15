@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ArtistCard from "./ArtistCard";
   
   const MusicCategory = () => {
     return (
       <nav id="music-color">
-        <h1>Hei</h1>
+        <h1>Hallo</h1>
+        <a href="/logginn"><h1><button>Logg inn</button></h1></a>
+        <a href="/#/oslo" category="EventCard" id="oslo-color"><p>Link til Oslo</p></a>
+        <a href="/#/stockholm" category="EventCard" id="stockholm-color"><p>Link til Stockholm</p></a>
+        <a href="/#/berlin" category="EventCard" id="berlin-color"><p>Link til Berlin</p></a>
+        <a href="/#/london" category="EventCard" id="london-color"><p>Link til London</p></a>
+        <a href="/#/paris" category="EventCard" id="paris-color"><p>Link til Paris</p></a>
           </nav>
       );
   };
