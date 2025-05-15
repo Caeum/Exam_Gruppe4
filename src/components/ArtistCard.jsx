@@ -13,7 +13,7 @@ const ArtistCard = () => {
   return (
     <nav>
       {kategorier.map((kategori) => (
-        <button><Link
+        <button id="this"><Link
           key={kategori.slug}
           to={`#/${kategori.slug}`}
           id={`#/${kategori.slug}-color`}
@@ -21,6 +21,9 @@ const ArtistCard = () => {
           {kategori.navn}
         </Link></button>
       ))}
+        <nav id="sport-color">
+          <p>hei</p>
+        </nav>
         </nav>
   );
 }

@@ -13,7 +13,7 @@ const Dashboard = () => {
     return (
         <div className="wrapper">
             <form onSubmit={handleSubmit}>
-                <h1>Logg inn</h1>
+                <h1>Dashboard</h1>
                 <div>
                     <label htmlFor="username">Brukernavn:</label>
                     <input

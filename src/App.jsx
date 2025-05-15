@@ -30,9 +30,9 @@ const App = () => {
         <Route path="#/berlin" id="berlin-color" slug={<EventCard category="billettlyst" />} />
         <Route path="#/london" id="london-color" slug={<EventCard category="billettlyst" />} />
 
-
         {/* Midlertidig rute for "Logg inn"-siden – kan erstattes med Dashboard senere */}
         <Route path="/logginn" element={<Dashboard category="logginn" />} />
+        <Route path="/logginn" id="music-color" element={<Dashboard category="logginn" />} />
       </Routes>
     </Router>
   );

@@ -61,10 +61,10 @@ const DiscoveriApi = () => {
                     <p>Fant ingen eventer.</p>
                 )}
             </div>
-                <a href="music"><button><p>Les mer om NEON | Lørdagspass - Music</p></button></a>
-                <a href="music"><button><p>Les mer om Tons of Rock at the Fortress - Music</p></button></a>
-                <a href="music"><button><p>Les mer om Skeikampenfestivalen - Dagspass - FREDAG - Music</p></button></a>
-                <a href="music"><button><p>Les mer om Findings Festival 2025 - Festivalpass - Music</p></button></a>
+                <a href="music"><button id="neon">Les mer om NEON | Lørdagspass - Music</button></a>
+                <a href="music"><button id="tons">Les mer om Tons of Rock at the Fortress - Music</button></a>
+                <a href="music"><button id="skei">Les mer om Skeikampenfestivalen - Dagspass - FREDAG - Music</button></a>
+                <a href="music"><button id="find">Les mer om Findings Festival 2025 - Festivalpass - Music</button></a>
                 <ArtistCard />
         </div>
     );

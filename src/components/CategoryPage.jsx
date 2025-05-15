@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
     return (
       <nav id="music-color">
         <h1>Hallo</h1>
-        <a href="/logginn"><h1><button>Logg inn</button></h1></a>
+        <a href="/logginn" id="vanlig-button"><button>Logg ut</button></a>
         <a href="/#/oslo" category="EventCard" id="oslo-color"><p>Link til Oslo</p></a>
         <a href="/#/stockholm" category="EventCard" id="stockholm-color"><p>Link til Stockholm</p></a>
         <a href="/#/berlin" category="EventCard" id="berlin-color"><p>Link til Berlin</p></a>
