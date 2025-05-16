@@ -15,8 +15,8 @@ const ArtistCard = () => {
       {kategorier.map((kategori) => (
         <button id="this"><Link
           key={kategori.slug}
-          to={`#/${kategori.slug}`}
-          id={`#/${kategori.slug}-color`}
+          to={`#${kategori.slug}`}
+          id={`#${kategori.slug}-color`}
         >
           {kategori.navn}
         </Link></button>

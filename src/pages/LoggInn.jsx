@@ -12,6 +12,7 @@ const Dashboard = () => {
 
     return (
         <div className="wrapper">
+            <a href="/" id="vanlig-button"><button>Logg ut</button></a>
             <form onSubmit={handleSubmit}>
                 <h1>Dashboard</h1>
                 <div>
