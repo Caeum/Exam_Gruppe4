@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-  
+
   const MusicCategory = () => {
     return (
       <nav id="music-color">
