@@ -11,7 +11,7 @@ const EventPage = () => {
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2C0rfZQ8HMwlwAzPyXnOZY1K&keyword=Findings&locale=*&startDateTime=2025-08-14T10:26:00Z&endDateTime=2025-08-17T10:26:00Z&onsaleStartDateTime=2025-08-15T10:28:00Z&onsaleEndDateTime=2025-08-16T10:28:00Z`);
+            const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2C0rfZQ8HMwlwAzPyXnOZY1K&keyword=Findings&locale=*&startDateTime=2025-08-14T11:07:00Z&endDateTime=2025-08-15T20:07:00Z`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
