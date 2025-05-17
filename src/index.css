@@ -91,7 +91,7 @@ li{
 
 #this {
   color: #fff;
-  background-color: #4a4a4a;
+  background-color: #373535;
   font-size:11px;
   padding:10px;
   border: 1px solid #000;
@@ -99,8 +99,14 @@ li{
   margin:10px;
 }
 
-#this button p{
+#lis {
   color: #fff;
+  background-color: #000000;
+  font-size:11px;
+  padding:10px;
+  border: 1px solid #000;
+  margin-top:50px;
+  margin:10px;
 }
 
 p{
@@ -140,45 +146,6 @@ p{
   margin:50px;
 }
 
-#neon{
-  color: #fff;
-  background-color: #000;
-  font-size:11px;
-  padding:10px;
-  border: 1px solid #000;
-  margin-top:50px;
-  margin:10px;
-}
-
-#find{
-  color: #fff;
-  background-color: #000;
-  font-size:11px;
-  padding:10px;
-  border: 1px solid #000;
-  margin-top:50px;
-  margin:10px;
-}
-
-#skei{
-  color: #fff;
-  background-color: #000;
-  font-size:11px;
-  padding:10px;
-  border: 1px solid #000;
-  margin-top:50px;
-  margin:10px;
-}
-
-#tons{
-  color: #fff;
-  background-color: #000;
-  font-size:11px;
-  padding:10px;
-  border: 1px solid #000;
-  margin-top:50px;
-  margin:10px;
-}
 
 #vanlig-button button {
   background-color:#e8e7e7;
