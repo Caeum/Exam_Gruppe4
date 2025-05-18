@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from './components/Navbar';
+import Navbar from './components/Home';
 import EventCard from './components/EventCard';
 import CategoryPage from './components/CategoryPage';
 import Dashboard from './pages/LoggInn';
@@ -22,8 +22,8 @@ const App = () => {
       <Routes>
         {/* Kategori-sider for musikk, sport og teater/show – sender kategori som prop */}
         <Route path="/music" element={<CategoryPage category="music" />} />
-        <Route path="/sport" element={<EventPage category="sport" />} />
-        <Route path="/teatershow" element={<Event category="teatershow" />} />
+        <Route path="/teatershow" element={<EventPage category="teatershoe" />} />
+        <Route path="/sport" element={<Event category="sport" />} />
         <Route path="/" element={<EventCard category="billettlyst" />} />
         <Route path="#/oslo" id="oslo-color" slug={<EventCard category="billettlyst" />} />
         <Route path="#/paris" id="paris-color" slug={<EventCard category="billettlyst" />} />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ArtistCard from './ArtistCard';
+import ArtistCard from './Home';
 
 function EventCard() {
   const [eventsBy, setEventsBy] = useState({
@@ -152,7 +152,7 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
         </button>
         {activeBy === 'oslo' && (
           <>
-            <img src="src/assets/website_images/findings.png"></img>
+            <img src="#"></img>
             <h3 id="hva-skjer-oslo">{overskriftBy.oslo}</h3>
             {eventsBy.oslo.length > 0 ? (
               <ul>

@@ -1,27 +1,82 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-const ArtistCard = () => {
-  const kategorier = [
-    { navn: "Les mer om NEON | Lørdagspass - Music", slug: "oslo" },
-    { navn: "Les mer om Tons of Rock at the Fortress - Music", slug: "stockholm" },
-    { navn: "Les mer om Skeikampenfestivalen - Dagspass - FREDAG - Music", slug: "berlin" },
-    { navn: "Les mer om Findings Festival 2025 - Festivalpass - Music", slug: "london" },
-  ];
+const Artist = () => {
+    const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-  return (
-    <nav>
-      {kategorier.map((kategori) => (
-            <button id="lis"><Link
-          key={kategori.slug}
-          to={`#${kategori.slug}`}
-          id={`#${kategori.slug}-color`}
-        >
-          {kategori.navn}
-        </Link></button>
-      ))}
-      </nav>
-  );
-}
+    const getData = async () => {
+        setLoading(true);
+        setError(null);
+        try {
+            const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events?apikey=RXo9ymsCtNpvTZE9eUJn8fnqTFcUGJ8T&id=Z698xZb_Z16v7eGkFy,Z698xZb_Z17q339,Z698xZb_Z17qfaA,%20Z698xZb_Z16vfkqIjU&locale=*`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            console.log("Test data i Home:", data);
 
-export default ArtistCard;
+            if (data._embedded && data._embedded.events) {
+                setEvents(data._embedded.events);
+            } else {
+                console.error("Klarte ikke finne noen eventer:", data);
+                setEvents([]);
+            }
+        } catch (error) {
+            setError(error);
+            console.error("Feil under fetch i Home", error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        getData();
+    }, []);
+
+    if (loading) {
+        return <p>Laster inn eventer...</p>;
+    }
+
+    if (error) {
+        return <p>Det oppstod en feil ved henting av eventer: {error.message}</p>;
+    }
+
+    return (
+            <div>
+            <div id="sport-color">
+      <h2>Sommerens festivaler!</h2>  
+        <h1>Findings Festival</h1>
+        <h2>Sjanger</h2>
+        <ul>
+        <li>Music</li>
+        <li>Undefined</li>
+        <li>Festival</li>
+        <li>Undefined</li>
+        </ul>
+        <h3>Følg oss på sosiale medier</h3>
+        <h3>Festivalplass:</h3>
+        <a href="#" category="EventPage" id="oslo-color"><button><p>Kjøp</p></button></a>
+        <a href="#" category="EventPage" id="stockholm-color"><p>Legg til i ønskeliste</p></a>
+                <a href="#" category="EventPage" id="oslo-color"><button><p>Kjøp</p></button></a>
+        <a href="#" category="EventPage" id="stockholm-color"><p>Legg til i ønskeliste</p></a>
+        </div>
+                {events.length > 0 ? (
+                    <ul>
+                        {events.map((event) => (
+                            <li key={event.id}>
+                                {event.name} - {event.classifications && event.classifications.length > 0 ? event.classifications[0].segment.name : 'Ingen kategori'}
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>Fant ingen eventer.</p>
+                )}
+            </div>
+    );
+};
+
+
+  export default Artist;

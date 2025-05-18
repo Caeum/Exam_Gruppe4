@@ -16,4 +16,28 @@ const Nav = () => {
     );
   };
 
-  export default Nav;
+  const ArtistCard = () => {
+  const kategorier = [
+    { navn: "Les mer om NEON | Lørdagspass - Music", slug: "" },
+    { navn: "Les mer om Tons of Rock at the Fortress - Music", slug: "" },
+    { navn: "Les mer om Skeikampenfestivalen - Dagspass - FREDAG - Music", slug: "" },
+    { navn: "Les mer om Findings Festival 2025 - Festivalpass - Music", slug: "" },
+  ];
+
+  return (
+    <nav>
+      {kategorier.map((kategori) => (
+            <button id="this"><Link
+          key={kategori.slug}
+          to={`/sport${kategori.slug}`}
+          id={`${kategori.slug}-color`}
+        >
+          {kategori.navn}
+        </Link></button>
+      ))};
+      </nav>
+            )};
+                        <Nav />
+
+
+  export default ArtistCard;
