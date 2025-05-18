@@ -8,7 +8,8 @@ import EventCard from './components/EventCard';
 import CategoryPage from './components/CategoryPage';
 import Dashboard from './pages/LoggInn';
 import EventPage from './components/EventPage';
-import Event from './components/Event';
+import Eventer from './components/EventPage';
+import Artist from './components/ArtistCard';
 
 // Hovedkomponenten for applikasjonen
 const App = () => {
@@ -23,7 +24,7 @@ const App = () => {
         {/* Kategori-sider for musikk, sport og teater/show – sender kategori som prop */}
         <Route path="/music" element={<CategoryPage category="music" />} />
         <Route path="/teatershow" element={<EventPage category="teatershoe" />} />
-        <Route path="/sport" element={<Event category="sport" />} />
+        <Route path="/sport" element={<Eventer category="sport" />} />
         <Route path="/" element={<EventCard category="billettlyst" />} />
         <Route path="#/oslo" id="oslo-color" slug={<EventCard category="billettlyst" />} />
         <Route path="#/paris" id="paris-color" slug={<EventCard category="billettlyst" />} />
@@ -33,6 +34,7 @@ const App = () => {
 
         {/* Midlertidig rute for "Logg inn"-siden – kan erstattes med Dashboard senere */}
         <Route path="/logginn" element={<Dashboard category="logginn" />} />
+        <Route path="/artist" id="london-color" element={<Artist />} />
       </Routes>
     </Router>
   );
