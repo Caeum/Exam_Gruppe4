@@ -5,7 +5,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import EventCard from './components/EventCard';
 import CategoryPage from './components/CategoryPage';
-import Dashboard from './components/LoggInn';
+import Dashboard from './components/Dashboard';
 import EventPage from './components/EventPage';
 import Eventer from './components/EventPage';
 
