@@ -14,7 +14,7 @@ const Dashboard = () => {
     return (
         <div className="wrapper">
             <ArtistCard />
-            <a href="/" id="vanlig-button"><button>Logg ut</button></a>
+            <a href="/" id="vanlige-button"><button>Logg ut</button></a>
             <form onSubmit={handleSubmit}>
                 <h1>Dashboard</h1>
                 <div>
@@ -36,8 +36,8 @@ const Dashboard = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
+                    <button id="vanlig-button">Logg inn</button>
                 </div>
-                <button type="submit">Logg inn</button>
             </form>
         </div>
     );

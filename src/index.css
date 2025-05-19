@@ -152,13 +152,22 @@ p{
 }
 
 
-#vanlig-button button {
+#vanlige-button button {
   background-color:#e8e7e7;
   color:#000;
   border: 1px solid #000;
   border-radius: 2px;
   padding:4px;
   margin-left:-650px;
+}
+
+#vanlig-button {
+  background-color:#e8e7e7;
+  color:#000;
+  border: 1px solid #000;
+  border-radius: 2px;
+  padding:4px;
+  margin-left:0;
 }
 
 #kjop-button {
