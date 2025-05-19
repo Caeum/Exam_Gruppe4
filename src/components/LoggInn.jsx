@@ -16,9 +16,9 @@ const Dashboard = () => {
             <ArtistCard />
             <a href="/" id="vanlige-button"><button>Logg ut</button></a>
             <form onSubmit={handleSubmit}>
-                <h1>Dashboard</h1>
+                <h2 id="dash">Dashboard</h2>
                 <div>
-                    <label htmlFor="username">Brukernavn:</label>
+                    <label htmlFor="username" id="bruker">Brukernavn</label>
                     <input
                         type="text"
                         id="username"
@@ -28,7 +28,7 @@ const Dashboard = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="password">Passord:</label>
+                    <label htmlFor="password" id="pass">Passord</label>
                     <input
                         type="password"
                         id="password"
@@ -36,7 +36,7 @@ const Dashboard = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <button id="vanlig-button">Logg inn</button>
+                    <button id="vanlig-button" type="submit">Logg inn</button>
                 </div>
             </form>
         </div>

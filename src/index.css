@@ -29,7 +29,7 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 175vh;
+  min-height: 110vh;
 }
 
 h1 {
@@ -50,41 +50,6 @@ h3{
   border-bottom: 2px solid #000;
   padding: calc(0.5rem + 4px) 1rem;
 }
-
-/* button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-  */
 
 li{
   display: inline;
@@ -156,7 +121,7 @@ p{
   background-color:#e8e7e7;
   color:#000;
   border: 1px solid #000;
-  border-radius: 2px;
+  border-radius: 3px;
   padding:4px;
   margin-left:-650px;
 }
@@ -165,7 +130,7 @@ p{
   background-color:#e8e7e7;
   color:#000;
   border: 1px solid #000;
-  border-radius: 2px;
+  border-radius: 3px;
   padding:4px;
   margin-left:0;
 }
@@ -212,25 +177,39 @@ p{
   margin-bottom:-80px;
 }
 
-#knapper {
-  display: inline-block;
-  justify-self: auto;
-  background-color:#e8e7e7;
-  color:#000;
-  border: 1px solid #000;
-  border-radius: 2px;
-  padding:4px;
+#bruker{
+    margin-left:-415px;
+    margin-bottom:50px;
 }
 
-#username{
-  background-color: #e8e7e7;
-  color:#000;
+#pass{
+    margin-left:-415px;
 }
 
 #password{
-  background-color: #e8e7e7; 
-  color: #000;
+  background-color: #fff;
+  color:#000;
+  margin-left:0;
+  margin-top:10px;
+  border: 1px solid #898888;
+  border-radius: 3px;
 }
+
+#username{
+  background-color: #fff;
+  color: #000;
+  margin-right:35px;
+  margin-top:10px;
+  border: 1px solid #898888;
+  border-radius: 3px;
+}
+
+#dash{
+    margin-left:-580px;
+    margin-top:25px;
+
+}
+
 
 img{
   width:20%;
