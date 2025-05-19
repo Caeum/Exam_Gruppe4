@@ -29,7 +29,7 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 120vh;
+  min-height: 175vh;
 }
 
 h1 {
@@ -158,9 +158,52 @@ p{
   border: 1px solid #000;
   border-radius: 2px;
   padding:4px;
+  margin-left:-650px;
 }
 
-button{
+#kjop-button {
+  color: #fff;
+  background-color: #373535;
+  font-size:11px;
+  padding:10px;
+  border: 1px solid #000;
+  margin-right:-70px;
+  margin-top:-40px;
+}
+
+#onskeliste-button {
+  color: #fff;
+  background-color: #373535;
+  font-size:11px;
+  padding:10px;
+  border: 1px solid #000;
+  margin-left: 450px;
+}
+
+
+#kjope-button {
+  color: #fff;
+  background-color: #373535;
+  font-size:11px;
+  padding:10px;
+  border: 1px solid #000;
+  margin-right:-20px;
+  margin-top:90px;
+  margin-bottom:-80px;
+}
+
+#onske-button {
+  color: #fff;
+  background-color: #373535;
+  font-size:11px;
+  padding:10px;
+  border: 1px solid #000;
+  margin-left: 395px;
+  margin-top: 90px;
+  margin-bottom:-80px;
+}
+
+#knapper {
   display: inline-block;
   justify-self: auto;
   background-color:#e8e7e7;
@@ -181,5 +224,22 @@ button{
 }
 
 img{
-  width:25%;
+  width:20%;
+  padding:50px;
+  margin:-30px;
+  margin-bottom: -65px;
+}
+
+#categoryimg{
+  width:20.5%;
+  padding:20px;
+  margin:0;
+  margin-bottom: -65px;
+}
+
+#categoryerimg{
+  width:22.5%;
+  padding:20px;
+  margin:0;
+  margin-bottom: -65px;
 }

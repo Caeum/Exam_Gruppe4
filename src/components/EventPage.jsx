@@ -30,7 +30,8 @@ const EventInfo = () => (
     </ul>
     <h3>Følg oss på sosiale medier</h3>
     <h3>Festivalplass:</h3>
-    <p>Her kommer det bilder</p>
+    <img id="categoryerimg" src="/src/assets/website_images/findings.png"></img>
+    <img id="categoryerimg" src="/src/assets/website_images/findings.png"></img>
   </div>
 );
 
@@ -80,11 +81,17 @@ const Eventer = () => {
 
        {/* Knappene for handling */}
       <div>
-        <button>Kjøp</button>
-        <button>Legg til i ønskeliste</button>
-      </div>
-
-      <p>Her kommer det bilder</p>
+        <button id="kjop-button">Kjøp</button>
+        <button id="onskeliste-button">Legg til i ønskeliste</button>
+        </div>
+        <div>
+    <img id="categoryimg" src="/src/assets/website_images/findings.png"></img>
+    <img id="categoryimg" src="/src/assets/website_images/findings.png"></img>
+    </div>
+          <div>
+        <button id="kjope-button">Kjøp</button>
+        <button id="onske-button">Legg til i ønskeliste</button>
+        </div>
     </div>
   );
 };
