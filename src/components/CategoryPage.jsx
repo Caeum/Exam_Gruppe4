@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ArtistCard from './Home';
 
 const CategoryPage = () => {
     const [events, setEvents] = useState([]);
@@ -50,6 +51,7 @@ const CategoryPage = () => {
     return (
         <div>
             <div>
+                        <ArtistCard />
                 <h2>Sommerens festivaler!</h2>    
                 {events.length > 0 ? (
                     <ul>

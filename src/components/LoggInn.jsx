@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ArtistCard from './Home';
 
 const Dashboard = () => {
     const [username, setUsername] = useState('');
@@ -12,6 +13,7 @@ const Dashboard = () => {
 
     return (
         <div className="wrapper">
+            <ArtistCard />
             <a href="/" id="vanlig-button"><button>Logg ut</button></a>
             <form onSubmit={handleSubmit}>
                 <h1>Dashboard</h1>

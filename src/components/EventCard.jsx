@@ -137,6 +137,7 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
   return (
     <div>
       <div>
+                <ArtistCard />
         <h2>Sommerens festivaler!</h2>
         <p>Her kommer det bilder</p>
         {NewEvents.length > 0 ? (
@@ -154,7 +155,6 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
         ) : (
           NewEvents.length !== 0 && <p>Kan ikke finne eventene</p>
         )}
-        <ArtistCard />
         <h2>Hva skjer i verdens storbyer</h2>
 
         <button id="this" onClick={fetchOslo} disabled={loading}>

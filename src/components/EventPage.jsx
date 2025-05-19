@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ArtistCard from './Home';
 
 const EventsList = ({ events }) => {
   if (!events.length) return <p>Fant ingen eventer.</p>;
@@ -18,6 +19,7 @@ const EventsList = ({ events }) => {
 // Komponent for statisk informasjon om festivalen
 const EventInfo = () => (
   <div id="sport-color">
+    <ArtistCard />
     <h1>Findings Festival</h1>
     <h2>Sjanger</h2>
     <ul>

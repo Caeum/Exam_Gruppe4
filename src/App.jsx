@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from './components/Home';
+import { Navbar, ArtistCard } from './components/Home';
 import EventCard from './components/EventCard';
 import CategoryPage from './components/CategoryPage';
 import Dashboard from './components/LoggInn';
@@ -17,8 +17,6 @@ const App = () => {
     // Router sørger for at applikasjonen kan bruke ruter med React Router
     <Router>
       {/* Navbar vises alltid øverst på alle sider */}
-      <Navbar />
-
       {/* Definerer ulike ruter (URL-stier) og hvilke komponenter som skal vises for hver */}
       <Routes>
          {/* Kategorisider */}

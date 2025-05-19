@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import ArtistCard from './Home';
 
 const Artist = () => {
     // useState for å holde på events, loading-status og eventuelle feil
@@ -55,6 +56,7 @@ const Artist = () => {
     return (
             <div>
             <div id="sport-color">
+                <ArtistCard />
       <h2>Sommerens festivaler!</h2>  
         <h1>Findings Festival</h1>
         <h2>Sjanger</h2>
