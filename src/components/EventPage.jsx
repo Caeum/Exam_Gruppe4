@@ -87,7 +87,7 @@ const Eventer = () => {
   }, []);
 
   if (loading) return <p>Laster inn eventer...</p>;
-  if (error) return <p>Det oppstod en feil ved henting av eventer: {error.message}</p>;
+  if (error) return <p>{error.message}</p>;
 
   return (
     <div>

@@ -8,7 +8,6 @@ import CategoryPage from './components/CategoryPage';
 import Dashboard from './components/LoggInn';
 import EventPage from './components/EventPage';
 import Eventer from './components/EventPage';
-import Artist from './components/ArtistCard';
 
 // Hovedkomponenten for applikasjonen
 const App = () => {
@@ -36,9 +35,6 @@ const App = () => {
 
         {/* Midlertidig rute for "Logg inn"-siden – kan erstattes med Dashboard senere */}
         <Route path="/logginn" element={<Dashboard category="logginn" />} />
-
-        {/* Artist-side */}
-        <Route path="/artist" element={<Artist />} />
       </Routes>
     </Router>
   );
