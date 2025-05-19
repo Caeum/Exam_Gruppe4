@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ArtistCard from './Home';
+import Navbar from './Home';
 
 const CategoryPage = () => {
     const [events, setEvents] = useState([]);
@@ -51,7 +51,7 @@ const CategoryPage = () => {
     return (
         <div>
             <div>
-                        <ArtistCard />
+                        <Navbar />
                 <h2>Sommerens festivaler!</h2>    
                 {events.length > 0 ? (
                     <ul>

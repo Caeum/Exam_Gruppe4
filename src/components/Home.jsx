@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <nav id="categories">
       <Link to="/" id="billettlyst-color">BillettLyst</Link>
@@ -23,7 +23,6 @@ export const ArtistCard = () => {
 
   return (
     <nav>
-          <Navbar />
       {kategorier.map((kategori) => (
         <button key={kategori.slug} id="this">
           <Link to={`/sport/${kategori.slug}`} id={`${kategori.slug}-color`}>
@@ -35,4 +34,4 @@ export const ArtistCard = () => {
   );
 };
 
-export default ArtistCard;
+export default Navbar;
