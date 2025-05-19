@@ -20,8 +20,10 @@ const App = () => {
       <Routes>
          {/* Kategorisider */}
         <Route path="/music" element={<CategoryPage category="music" />} />
-        <Route path="/teatershow" element={<EventPage category="teatershow" />} />
-        <Route path="/sport" element={<Eventer category="sport" />} />
+        <Route path="/sport" element={<CategoryPage category="sport" />} />
+        <Route path="/teatershow" element={<CategoryPage category="teatershow" />} />
+        <Route path="/events" element={<EventPage category="events" />} />
+        <Route path="/events" element={<Eventer category="events" />} />
 
         {/* Hjemmeside */}
         <Route path="/" element={<EventCard category="billettlyst" />} />

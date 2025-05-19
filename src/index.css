@@ -80,7 +80,6 @@ li{
 }
 
 p{
-  font-size:10px;
   color: #313030;
 }
 
@@ -141,8 +140,9 @@ p{
   font-size:11px;
   padding:10px;
   border: 1px solid #000;
-  margin-right:-70px;
-  margin-top:-40px;
+  margin-right:255px;
+  margin-left:40px;
+  margin-top:-180px;
 }
 
 #onskeliste-button {
@@ -151,7 +151,7 @@ p{
   font-size:11px;
   padding:10px;
   border: 1px solid #000;
-  margin-left: 450px;
+  margin-left: 370px;
 }
 
 
@@ -161,8 +161,8 @@ p{
   font-size:11px;
   padding:10px;
   border: 1px solid #000;
-  margin-right:-20px;
-  margin-top:90px;
+  margin-right:310px;
+  margin-top:20px;
   margin-bottom:-80px;
 }
 
@@ -172,8 +172,8 @@ p{
   font-size:11px;
   padding:10px;
   border: 1px solid #000;
-  margin-left: 395px;
-  margin-top: 90px;
+  margin-left: 370px;
+  margin-top: -100px;
   margin-bottom:-80px;
 }
 
@@ -219,15 +219,13 @@ img{
 }
 
 #categoryimg{
-  width:20.5%;
-  padding:20px;
-  margin:0;
-  margin-bottom: -65px;
+  width:30%;
+  padding:100px;
+  margin-bottom: -100px;
 }
 
 #categoryerimg{
-  width:22.5%;
-  padding:20px;
-  margin:0;
-  margin-bottom: -65px;
+  width:30%;
+  padding:100px;
+  margin-bottom: -100px;
 }

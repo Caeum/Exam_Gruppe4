@@ -1,6 +1,41 @@
 import { useState, useEffect } from "react";
 import Navbar from './Home';
 
+
+const EventInfo = ({ eventenes }) => {
+  return (
+    <div id="sport-color">
+            <Navbar />
+      <h1>Findings Festival</h1>
+      <h2>Sjanger</h2>
+      <ul>
+        <li>Music</li>
+        <li>Undefined</li>
+        <li>Festival</li>
+        <li>Undefined</li>
+      </ul>
+      <h2>Følg oss på sosiale medier</h2>
+      <h2>Festivalplass:</h2>
+      <img id="categoryerimg" src="/src/assets/website_images/findings.png" alt="findings festivalen"/>
+      <img id="categoryerimg" src="/src/assets/website_images/findings.png" alt="findings festivalen"/>
+
+      {eventenes && eventenes.length > 0 ? (
+        <>
+          <ul>
+            {eventenes.map(event => (
+              <li key={event.id}>
+                {event.name} - {event.classifications && event.classifications.length > 0 ? event.classifications[0].segment.name : 'Ingen kategorier funnet'}
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : (
+        <p>Fant ingen eventer.</p>
+      )}
+    </div>
+  );
+};
+
 const EventsList = ({ events }) => {
   if (!events.length) return <p>Fant ingen eventer.</p>;
 
@@ -16,26 +51,6 @@ const EventsList = ({ events }) => {
   );
 };
 
-// Komponent for statisk informasjon om festivalen
-const EventInfo = () => (
-  <div id="sport-color">
-    <Navbar />
-    <h1>Findings Festival</h1>
-    <h2>Sjanger</h2>
-    <ul>
-      <li>Music</li>
-      <li>Undefined</li>
-      <li>Festival</li>
-      <li>Undefined</li>
-    </ul>
-    <h3>Følg oss på sosiale medier</h3>
-    <h3>Festivalplass:</h3>
-    <img id="categoryerimg" src="/src/assets/website_images/findings.png"></img>
-    <img id="categoryerimg" src="/src/assets/website_images/findings.png"></img>
-  </div>
-);
-
-
 // Hovedkomponenten som henter data og viser både info og events
 const Eventer = () => {
 // State for å holde events, loading-status og eventuell error
@@ -48,7 +63,7 @@ const Eventer = () => {
     setError(null);
     try {
       const response = await fetch(
-        `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2C0rfZQ8HMwlwAzPyXnOZY1K&keyword=Findings&locale=*&startDateTime=2025-08-15T10:26:00Z&endDateTime=2025-08-16T10:26:00Z`
+        `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2C0rfZQ8HMwlwAzPyXnOZY1K&keyword=Findings&locale=*&startDateTime=2025-08-14T11:07:00Z&endDateTime=2025-08-15T20:07:00Z`
       );
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -76,23 +91,29 @@ const Eventer = () => {
 
   return (
     <div>
-      <EventInfo />
-      <EventsList events={events} />
 
        {/* Knappene for handling */}
-      <div>
-        <button id="kjop-button">Kjøp</button>
-        <button id="onskeliste-button">Legg til i ønskeliste</button>
-        </div>
-        <div>
-    <img id="categoryimg" src="/src/assets/website_images/findings.png"></img>
-    <img id="categoryimg" src="/src/assets/website_images/findings.png"></img>
-    </div>
-          <div>
-        <button id="kjope-button">Kjøp</button>
-        <button id="onske-button">Legg til i ønskeliste</button>
-        </div>
-    </div>
+<div>
+  <ul>
+    <li>
+      <EventInfo eventenes={events} />
+      <button id="kjop-button">Kjøp</button>
+      <button id="onskeliste-button">Legg til i ønskeliste</button>
+    </li>
+  </ul>
+</div>
+<ul>
+  <li>
+    <img id="categoryimg" src="/src/assets/website_images/findings.png" alt="" />
+    <img id="categoryimg" src="/src/assets/website_images/findings.png" alt="" />
+  </li>
+  <EventsList events={events} />
+  <button id="kjope-button">Kjøp</button>
+  <button id="onske-button">Legg til i ønskeliste</button>
+</ul>
+<div>
+</div>
+</div>
   );
 };
 

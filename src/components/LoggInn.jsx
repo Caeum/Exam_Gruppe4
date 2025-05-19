@@ -14,7 +14,7 @@ const Dashboard = () => {
     return (
         <div className="wrapper">
             <ArtistCard />
-            <a href="/" id="vanlige-button"><button>Logg ut</button></a>
+            <a href="/logginn" id="vanlige-button"><button>Logg ut</button></a>
             <form onSubmit={handleSubmit}>
                 <h2 id="dash">Dashboard</h2>
                 <div>

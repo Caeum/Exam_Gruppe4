@@ -168,7 +168,6 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
         </button>
         {activeBy === 'oslo' && (
           <>
-            <img src="#"></img>
             <h3 id="hva-skjer-oslo">{overskriftBy.oslo}</h3>
             {eventsBy.oslo.length > 0 ? (
               <ul>
@@ -278,8 +277,6 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
             )}
           </>
         )}
-
-        <p>Her kommer det bilder</p>
       </div>
     </div>
   );

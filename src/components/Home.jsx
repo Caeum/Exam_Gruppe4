@@ -25,7 +25,7 @@ export const ArtistCard = () => {
     <nav>
       {kategorier.map((kategori) => (
         <button key={kategori.slug} id="this">
-          <Link to={`/sport/${kategori.slug}`} id={`${kategori.slug}-color`}>
+          <Link to={`/events/${kategori.slug}`} id={`${kategori.slug}-color`}>
             {kategori.navn}
           </Link>
         </button>
