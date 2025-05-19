@@ -52,7 +52,7 @@ const CategoryPage = () => {
         <div>
             <div>
                         <Navbar />
-                <h2>Sommerens festivaler!</h2>    
+                <h2>Sommerens festivaler!</h2>
                 {events.length > 0 ? (
                     <ul>
                         {events.map((event) => (

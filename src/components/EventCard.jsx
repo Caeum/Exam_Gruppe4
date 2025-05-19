@@ -140,7 +140,10 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
       <div>
                 <Navbar />
         <h2>Sommerens festivaler!</h2>
-        <p>Her kommer det bilder</p>
+      <img src="/src/assets/website_images/neon.png"></img>
+      <img src="/src/assets/website_images/tons_of_rock.png"></img>
+      <img src="/src/assets/website_images/skeikampen.png"></img>
+      <img src="/src/assets/website_images/findings.png"></img>
         {NewEvents.length > 0 ? (
           <ul>
              {/* Vis nye events */}
