@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Navbar-komponent for hovednavigasjon mellom kategorisider
 const Navbar = () => {
   return (
     <nav id="categories">
@@ -13,7 +14,9 @@ const Navbar = () => {
   );
 };
 
+// ArtistCard-komponent viser knapper for spesifikke festivalarrangementer
 export const ArtistCard = () => {
+// Statisk liste med festivaler
   const kategorier = [
     { navn: "Les mer om NEON| Lørdagspass - Music", slug: "#" },
     { navn: "Les mer om Tons of Rock at the Fortress - Music", slug: "#" },
@@ -23,6 +26,7 @@ export const ArtistCard = () => {
 
   return (
     <nav>
+      {/* Mapper over festivalene og lager en knapp for hver */}
       {kategorier.map((kategori) => (
         <button key={kategori.slug} id="this">
           <Link to={`/events/${kategori.slug}`} id={`${kategori.slug}-color`}>

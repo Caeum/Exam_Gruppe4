@@ -11,7 +11,7 @@ function EventCard() {
     london: [],
     paris: [],
   });
-   // State for overskrifter for hver by
+   // State for overskrifter som vises når en by er aktiv
   const [overskriftBy, setOverskriftBy] = useState({
     oslo: '',
     stockholm: '',
@@ -30,7 +30,7 @@ function EventCard() {
   // Aktiv valgt by (for å vise riktig liste)
   const [activeBy, setActiveBy] = useState(null);
 
-   // URLer for forskjellige fetch-kall mot API
+  // URLer for forskjellige fetch-kall mot API
 const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2C0rfZQ8HMwlwAzPyXnOZY1K&keyword=Findings&locale=*&startDateTime=2025-08-15T10:26:00Z&endDateTime=2025-08-16T10:26:00Z`;
     const firstUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=RXo9ymsCtNpvTZE9eUJn8fnqTFcUGJ8T&id=Z698xZb_Z16v7eGkFy,Z698xZb_Z17q339,Z698xZb_Z17qfaA,%20Z698xZb_Z16vfkqIjU&locale=*`;
     const moreUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2C0rfZQ8HMwlwAzPyXnOZY1K&keyword=Findings&locale=*&startDateTime=2025-08-14T11:07:00Z&endDateTime=2025-08-15T20:07:00Z`;
@@ -40,7 +40,7 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
 
 
 
-
+  // Henter events for spesifikk by og oppdaterer state
   const getData = async (url, city) => {
     setLoading(true);
     setError(null);
@@ -68,6 +68,7 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
     }
   };
 
+  // Henter nye eventer som vises øverst
   const getNewData = async (url) => {
     setLoading(true);
     setError(null);
@@ -92,11 +93,12 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
     }
   };
 
+  // Kjør en gang når komponenten rendres først
   useEffect(() => {
     getNewData(firstUrl);
   }, []);
 
-   // Hjelpefunksjoner for å hente events og sette overskrifter for hver by
+  // Henter eventer for hver by + setter overskrift og aktiv by
   const fetchOslo = () => {
     getData(leUrl, 'oslo');
     setOverskriftBy((prevOverskrift) => ({ ...prevOverskrift, oslo: 'Hva skjer i Oslo' }));
@@ -140,13 +142,14 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
       <div>
                 <Navbar />
         <h2>Sommerens festivaler!</h2>
+        {/* Bilder til frontseksjonen */}
       <img src="/src/assets/website_images/neon.png"></img>
       <img src="/src/assets/website_images/tons_of_rock.png"></img>
       <img src="/src/assets/website_images/skeikampen.png"></img>
       <img src="/src/assets/website_images/findings.png"></img>
         {NewEvents.length > 0 ? (
           <ul>
-             {/* Vis nye events */}
+            {/* Vis nye events */}
             {NewEvents.map((event) => (
               <li key={event.id}>
                 {event.name} -{' '}
@@ -163,6 +166,8 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
           <ArtistCard />
         </div>
         <h2>Hva skjer i verdens storbyer</h2>
+
+        {/* Knapp for Oslo */}
         <button id="this" onClick={fetchOslo} disabled={loading}>
           {loading ? 'Laster inn..' : 'Oslo'}
         </button>
@@ -186,6 +191,7 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
           </>
         )}
 
+        {/* Knapp for Stockholm */}
         <button id="this" onClick={fetchStockholm} disabled={loading}>
           {loading ? 'Laster inn..' : 'Stockholm'}
         </button>
@@ -209,6 +215,7 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
           </>
         )}
 
+        {/* Gjentatt struktur for Berlin, London og Paris */}
         <button id="this" onClick={fetchBerlin} disabled={loading}>
           {loading ? 'Laster inn..' : 'Berlin'}
         </button>

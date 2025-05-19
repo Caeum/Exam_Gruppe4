@@ -17,7 +17,7 @@ const App = () => {
       {/* Navbar vises alltid øverst på alle sider */}
       {/* Definerer ulike ruter (URL-stier) og hvilke komponenter som skal vises for hver */}
       <Routes>
-         {/* Kategorisider */}
+        {/* Kategorisider */}
         <Route path="/music" element={<CategoryPage category="music" />} />
         <Route path="/sport" element={<CategoryPage category="sport" />} />
         <Route path="/teatershow" element={<CategoryPage category="teatershow" />} />
@@ -33,7 +33,7 @@ const App = () => {
         <Route path="#/berlin" slug={<EventCard category="billettlyst" />} />
         <Route path="#/london" slug={<EventCard category="billettlyst" />} />
 
-        {/* Midlertidig rute for "Logg inn"-siden – kan erstattes med Dashboard senere */}
+        {/* Midlertidig rute for innlogging */}
         <Route path="/logginn" element={<Dashboard category="logginn" />} />
       </Routes>
     </Router>

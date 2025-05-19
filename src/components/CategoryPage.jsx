@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import Navbar from './Home';
 
+// Komponent som viser en liste med eventer hentet fra Ticketmaster API
 const EventList = ({ apiUrl, categoryName }) => {
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // Henter data fra API
     const getData = async () => {
         setLoading(true);
         setError(null);
@@ -31,10 +33,12 @@ const EventList = ({ apiUrl, categoryName }) => {
         }
     };
 
+    // useEffect kjører når apiUrl endres
     useEffect(() => {
         getData();
     }, [apiUrl]);
 
+    // Tilstandshåndtering
     if (loading) {
         return <p>Laster inn eventer.. {categoryName}</p>;
     }
@@ -61,10 +65,13 @@ const EventList = ({ apiUrl, categoryName }) => {
     );
 };
 
+// Kategori-side som viser flere EventList-komponenter
 const CategoryPage = () => {
     return (
         <div>
+            {/* Viser navbaren på toppen */}
             <Navbar />
+            {/* Viser event-lister for forskjellige søkeord/kategorier */}
             <EventList
                 apiUrl="https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2C0rfZQ8HMwlwAzPyXnOZY1K&keyword=neon&locale=*"
                 categoryName="NEON"
