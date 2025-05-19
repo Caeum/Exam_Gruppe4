@@ -23,7 +23,7 @@ const App = () => {
       <Routes>
         {/* Kategori-sider for musikk, sport og teater/show – sender kategori som prop */}
         <Route path="/music" element={<CategoryPage category="music" />} />
-        <Route path="/teatershow" element={<EventPage category="teatershoe" />} />
+        <Route path="/teatershow" element={<EventPage category="teatershow" />} />
         <Route path="/sport" element={<Eventer category="sport" />} />
         <Route path="/" element={<EventCard category="billettlyst" />} />
         <Route path="#/oslo" id="oslo-color" slug={<EventCard category="billettlyst" />} />
