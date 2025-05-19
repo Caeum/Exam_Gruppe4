@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"; //Importerer Link fra react-router-dom for Nav.
 
 // Nav-komponenten viser navigasjonsmenyen som skal vises på alle sider
-const ArtistCard = () => {
+const Navbar = () => {
     return (
       // <nav> brukes for semantisk HTML – markerer navigasjonsinnhold
       <nav id="categories">
@@ -17,9 +17,7 @@ const ArtistCard = () => {
   };
 
 
-  // Navbar-komponenten viser ArtistCard og en dynamisk liste av knapper med linker
-const Navbar = () => {
-  // En liste med kategorier som skal vises som knapper
+const ArtistCard = () => {
 const kategorier = [
 { navn: "Les mer om NEON  | Lørdagspass - Music", slug: "" },
 { navn: "Les mer om Tons of Rock at the Fortress - Music", slug: "" },
@@ -30,7 +28,6 @@ const kategorier = [
 return (
 <nav>
 <ArtistCard />
-{/* Mapper over kategorier og lager en knapp for hver */}
 {kategorier.map((kategori) => (
 <button id="this"><Link
 key={kategori.slug}

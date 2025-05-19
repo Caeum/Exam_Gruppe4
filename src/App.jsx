@@ -23,7 +23,7 @@ const App = () => {
       <Routes>
          {/* Kategorisider */}
         <Route path="/music" element={<CategoryPage category="music" />} />
-        <Route path="/teatershow" element={<EventPage category="teatershoe" />} />
+        <Route path="/teatershow" element={<EventPage category="teatershow" />} />
         <Route path="/sport" element={<Eventer category="sport" />} />
 
         {/* Hjemmeside */}
