@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Home';
 import EventCard from './components/EventCard';
 import CategoryPage from './components/CategoryPage';
-import Dashboard from './pages/LoggInn';
+import Dashboard from './components/LoggInn';
 import EventPage from './components/EventPage';
 import Eventer from './components/EventPage';
 import Artist from './components/ArtistCard';
@@ -21,20 +21,25 @@ const App = () => {
 
       {/* Definerer ulike ruter (URL-stier) og hvilke komponenter som skal vises for hver */}
       <Routes>
-        {/* Kategori-sider for musikk, sport og teater/show – sender kategori som prop */}
+         {/* Kategorisider */}
         <Route path="/music" element={<CategoryPage category="music" />} />
         <Route path="/teatershow" element={<EventPage category="teatershoe" />} />
         <Route path="/sport" element={<Eventer category="sport" />} />
+
+        {/* Hjemmeside */}
         <Route path="/" element={<EventCard category="billettlyst" />} />
-        <Route path="#/oslo" id="oslo-color" slug={<EventCard category="billettlyst" />} />
-        <Route path="#/paris" id="paris-color" slug={<EventCard category="billettlyst" />} />
-        <Route path="#/stockholm" id="stockhom-color" slug={<EventCard category="billettlyst" />} />
-        <Route path="#/berlin" id="berlin-color" slug={<EventCard category="billettlyst" />} />
-        <Route path="#/london" id="london-color" slug={<EventCard category="billettlyst" />} />
+
+        <Route path="#/oslo" slug={<EventCard category="billettlyst" />} />
+        <Route path="#/paris" slug={<EventCard category="billettlyst" />} />
+        <Route path="#/stockholm" slug={<EventCard category="billettlyst" />} />
+        <Route path="#/berlin" slug={<EventCard category="billettlyst" />} />
+        <Route path="#/london" slug={<EventCard category="billettlyst" />} />
 
         {/* Midlertidig rute for "Logg inn"-siden – kan erstattes med Dashboard senere */}
         <Route path="/logginn" element={<Dashboard category="logginn" />} />
-        <Route path="/artist" id="london-color" element={<Artist />} />
+
+        {/* Artist-side */}
+        <Route path="/artist" element={<Artist />} />
       </Routes>
     </Router>
   );

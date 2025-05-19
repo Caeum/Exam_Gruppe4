@@ -17,7 +17,9 @@ const ArtistCard = () => {
   };
 
 
+  // Navbar-komponenten viser ArtistCard og en dynamisk liste av knapper med linker
 const Navbar = () => {
+  // En liste med kategorier som skal vises som knapper
 const kategorier = [
 { navn: "Les mer om NEON  | Lørdagspass - Music", slug: "" },
 { navn: "Les mer om Tons of Rock at the Fortress - Music", slug: "" },
@@ -28,6 +30,7 @@ const kategorier = [
 return (
 <nav>
 <ArtistCard />
+{/* Mapper over kategorier og lager en knapp for hver */}
 {kategorier.map((kategori) => (
 <button id="this"><Link
 key={kategori.slug}

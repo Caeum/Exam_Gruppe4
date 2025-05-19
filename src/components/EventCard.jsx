@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ArtistCard from './Home';
 
 function EventCard() {
+   // State for events delt opp etter by
   const [eventsBy, setEventsBy] = useState({
     oslo: [],
     stockholm: [],
@@ -9,6 +10,7 @@ function EventCard() {
     london: [],
     paris: [],
   });
+   // State for overskrifter for hver by
   const [overskriftBy, setOverskriftBy] = useState({
     oslo: '',
     stockholm: '',
@@ -17,11 +19,17 @@ function EventCard() {
     paris: '',
   });
 
+  // Loading og error state for generell lasting og feil
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  // State for nye events som vises først i komponenten
   const [NewEvents, setNewEvents] = useState([]);
+
+  // Aktiv valgt by (for å vise riktig liste)
   const [activeBy, setActiveBy] = useState(null);
 
+   // URLer for forskjellige fetch-kall mot API
 const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2C0rfZQ8HMwlwAzPyXnOZY1K&keyword=Findings&locale=*&startDateTime=2025-08-15T10:26:00Z&endDateTime=2025-08-16T10:26:00Z`;
     const firstUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=RXo9ymsCtNpvTZE9eUJn8fnqTFcUGJ8T&id=Z698xZb_Z16v7eGkFy,Z698xZb_Z17q339,Z698xZb_Z17qfaA,%20Z698xZb_Z16vfkqIjU&locale=*`;
     const moreUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2C0rfZQ8HMwlwAzPyXnOZY1K&keyword=Findings&locale=*&startDateTime=2025-08-14T11:07:00Z&endDateTime=2025-08-15T20:07:00Z`;
@@ -87,6 +95,7 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
     getNewData(firstUrl);
   }, []);
 
+   // Hjelpefunksjoner for å hente events og sette overskrifter for hver by
   const fetchOslo = () => {
     getData(leUrl, 'oslo');
     setOverskriftBy((prevOverskrift) => ({ ...prevOverskrift, oslo: 'Hva skjer i Oslo' }));
@@ -132,6 +141,7 @@ const leUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2
         <p>Her kommer det bilder</p>
         {NewEvents.length > 0 ? (
           <ul>
+             {/* Vis nye events */}
             {NewEvents.map((event) => (
               <li key={event.id}>
                 {event.name} -{' '}

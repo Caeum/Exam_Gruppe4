@@ -5,11 +5,14 @@ const CategoryPage = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // Asynkron funksjon for å hente events fra Ticketmaster API med søkeord og tidsfilter
     const getData = async () => {
-        setLoading(true);
-        setError(null);
+        setLoading(true); // Sett loading på true mens vi henter
+        setError(null); // Nullstill feil
         try {
+             // Fetch data fra Ticketmaster API med keyword og dato-filtre
             const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events?apikey=7cwivEUE2C0rfZQ8HMwlwAzPyXnOZY1K&keyword=Findings&locale=*&startDateTime=2025-08-15T10:26:00Z&endDateTime=2025-08-16T10:26:00Z`);
+              // Sjekk responsstatus
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -34,10 +37,12 @@ const CategoryPage = () => {
         getData();
     }, []);
 
+    // Vis melding under innlasting
     if (loading) {
         return <p>Laster inn eventer...</p>;
     }
 
+    // Vis feilmelding hvis noe gikk galt
     if (error) {
         return <p>Det oppstod en feil ved henting av eventer: {error.message}</p>;
     }
@@ -50,6 +55,7 @@ const CategoryPage = () => {
                     <ul>
                         {events.map((event) => (
                             <li key={event.id}>
+                            {/* Vis event-navn og kategori hvis tilgjengelig */}
                                 {event.name} - {event.classifications && event.classifications.length > 0 ? event.classifications[0].segment.name : 'Ingen kategori'}
                             </li>
                         ))}

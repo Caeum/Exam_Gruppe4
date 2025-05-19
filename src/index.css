@@ -23,7 +23,7 @@ a:hover {
 }
 
 body {
-  background-color: #fff;
+  background-color: #ffffff;
   color: #000;
   margin: 0;
   display: flex;
@@ -44,6 +44,11 @@ h2{
 
 h3{
   font-weight:bold;
+}
+
+#categories{
+  border-bottom: 2px solid #000;
+  padding: calc(0.5rem + 4px) 1rem;
 }
 
 /* button {
