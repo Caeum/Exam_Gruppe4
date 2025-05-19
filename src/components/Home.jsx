@@ -15,10 +15,10 @@ const Navbar = () => {
 
 export const ArtistCard = () => {
   const kategorier = [
-    { navn: "Les mer om NEON| Lørdagspass - Music", slug: "neon" },
-    { navn: "Les mer om Tons of Rock at the Fortress - Music", slug: "tons-of-rock" },
-    { navn: "Les mer om Skeikampfestivalen - Dagspass - FREDAG - Music", slug: "skeikampfestivalen" },
-    { navn: "Les mer om Findings Festival 2025 - Festivalpass - Music", slug: "findings-festival" },
+    { navn: "Les mer om NEON| Lørdagspass - Music", slug: "#" },
+    { navn: "Les mer om Tons of Rock at the Fortress - Music", slug: "#" },
+    { navn: "Les mer om Skeikampfestivalen - Dagspass - FREDAG - Music", slug: "#" },
+    { navn: "Les mer om Findings Festival 2025 - Festivalpass - Music", slug: "#" },
   ];
 
   return (
